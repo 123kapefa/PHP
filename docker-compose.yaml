@@ -1,0 +1,66 @@
+services:
+  app:
+    container_name: app_lessons
+    build:
+      context: .
+      dockerfile: .docker/app/Dockerfile
+    working_dir: /app
+    volumes:
+      - ./app:/app
+#    env_file:
+#      - ./app/.env
+  webserver:
+    container_name: server_lessons
+    build:
+      context: .
+      dockerfile: .docker/server/Dockerfile
+    working_dir: /app
+    volumes:
+      - ./app:/app
+    ports:
+      - "8080:80"
+
+  db:
+    container_name: app_lessons_db
+    image: 'bitnami/postgresql:15.0.0'
+    volumes:
+      - 'db_data:/bitnami/postgresql'
+    environment:
+      POSTGRESQL_USERNAME: db_user
+      POSTGRESQL_PASSWORD: db_pass
+      POSTGRESQL_DATABASE: app
+
+#  npm:
+#    container_name: app_lessons_npm
+#    image: node:latest
+#    working_dir: /app
+#    volumes:
+#      - ./client:/app
+#    command: 'npx create-react-app my-app'
+#    #command: 'npm start'
+#    ports:
+#      - '8082:3000'
+
+#  cron:
+#    container_name: app_lessons_cron
+#    build:
+#      context: .
+#      dockerfile: .docker/app/Dockerfile.cron
+#    working_dir: /app
+#    volumes:
+#      - ./app:/app
+#    env_file:
+#      - ./app/.env
+
+#  mail:
+#    container_name: app_lessons_mail
+#    image: eaudeweb/mailtrap
+#    ports:
+#      - "8083:80"
+#    environment:
+#      MT_USER: user
+#      MT_PASSWD: password
+#      MT_SIZE_LIMIT: 0
+
+volumes:
+  db_data:

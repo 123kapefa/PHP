@@ -115,6 +115,7 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/sanctum" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/laravel/scout" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/orchid/blade-icons" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/orchid/crud" />

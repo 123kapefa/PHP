@@ -1,66 +1,79 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# `Posts`
+## Get Posts
+> curl --location 'localhost:8080/api/posts/getPosts' \
+--header 'Accept: application/json' \
+--header 'Authorization: ••••••' \
+--header 'Cookie: XSRF-TOKEN=eyJpdiI6IitaZ2gzMzd1MithVFI1Y0Y2VTZMZUE9PSIsInZhbHVlIjoicVR6dm1pUGlCdjFOYmlQc2tZRytSL2laSGlxY3JjVks5N2JOYTNFUFdnc0J0Q0ErTEtzVUw1NC8ycVFiSTBwYVUxY1grUkg3V1VSQ2pCYU1GWGxwbmVMVzFSODMxVEQ2UGpGMmtLMGQvSzA1cXR5L20zLzVGcE9ubW9pMEpRbSsiLCJtYWMiOiJkZmY1ZjljNTljY2Q3ZTFmMmE2NzgzYjYyZTdjNjZiOTg4NmI2NTIzMGYwMGE5ZjQzYWM0YmE3NjNlNmY4YjQ5IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IlYzczdlWW1iSlNWN08yV3A0TWhqSUE9PSIsInZhbHVlIjoiMkZ4dkM0a01xaGNDb0pLSUlUNE5LanNLYkt1MXB0VGxHWExtY1FCK3FDbi9nRnkvNmlZYjhSODdCajA2Rk5uMFVxMFQ4eXZ5eGJCVXdNUUQ1TS9FUHJpOS9wYUppaXlWNUhDSk1lY0NHL0V4UURsVENyUnpmeFhBdXlGcVhod1giLCJtYWMiOiIxMTQ0MDAwNzNlZjk3MzlhMDYwNjdhYTYzNTdiZjc4YTI4ZTU4ZDJhOTA3MmVlNzI4MTAxY2U0OTkwNmY5NmY3IiwidGFnIjoiIn0%3D' 
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Get Post
+> curl --location 'localhost:8080/api/posts/getPost/2' \
+--header 'Accept: application/json' \
+--header 'Authorization: ••••••' \
+--header 'Cookie: XSRF-TOKEN=eyJpdiI6IitaZ2gzMzd1MithVFI1Y0Y2VTZMZUE9PSIsInZhbHVlIjoicVR6dm1pUGlCdjFOYmlQc2tZRytSL2laSGlxY3JjVks5N2JOYTNFUFdnc0J0Q0ErTEtzVUw1NC8ycVFiSTBwYVUxY1grUkg3V1VSQ2pCYU1GWGxwbmVMVzFSODMxVEQ2UGpGMmtLMGQvSzA1cXR5L20zLzVGcE9ubW9pMEpRbSsiLCJtYWMiOiJkZmY1ZjljNTljY2Q3ZTFmMmE2NzgzYjYyZTdjNjZiOTg4NmI2NTIzMGYwMGE5ZjQzYWM0YmE3NjNlNmY4YjQ5IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IlYzczdlWW1iSlNWN08yV3A0TWhqSUE9PSIsInZhbHVlIjoiMkZ4dkM0a01xaGNDb0pLSUlUNE5LanNLYkt1MXB0VGxHWExtY1FCK3FDbi9nRnkvNmlZYjhSODdCajA2Rk5uMFVxMFQ4eXZ5eGJCVXdNUUQ1TS9FUHJpOS9wYUppaXlWNUhDSk1lY0NHL0V4UURsVENyUnpmeFhBdXlGcVhod1giLCJtYWMiOiIxMTQ0MDAwNzNlZjk3MzlhMDYwNjdhYTYzNTdiZjc4YTI4ZTU4ZDJhOTA3MmVlNzI4MTAxY2U0OTkwNmY5NmY3IiwidGFnIjoiIn0%3D'
 
-## About Laravel
+## Add Post
+> curl --location 'localhost:8080/api/posts/addPost' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: ••••••' \
+--header 'Cookie: XSRF-TOKEN=eyJpdiI6IitaZ2gzMzd1MithVFI1Y0Y2VTZMZUE9PSIsInZhbHVlIjoicVR6dm1pUGlCdjFOYmlQc2tZRytSL2laSGlxY3JjVks5N2JOYTNFUFdnc0J0Q0ErTEtzVUw1NC8ycVFiSTBwYVUxY1grUkg3V1VSQ2pCYU1GWGxwbmVMVzFSODMxVEQ2UGpGMmtLMGQvSzA1cXR5L20zLzVGcE9ubW9pMEpRbSsiLCJtYWMiOiJkZmY1ZjljNTljY2Q3ZTFmMmE2NzgzYjYyZTdjNjZiOTg4NmI2NTIzMGYwMGE5ZjQzYWM0YmE3NjNlNmY4YjQ5IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IlYzczdlWW1iSlNWN08yV3A0TWhqSUE9PSIsInZhbHVlIjoiMkZ4dkM0a01xaGNDb0pLSUlUNE5LanNLYkt1MXB0VGxHWExtY1FCK3FDbi9nRnkvNmlZYjhSODdCajA2Rk5uMFVxMFQ4eXZ5eGJCVXdNUUQ1TS9FUHJpOS9wYUppaXlWNUhDSk1lY0NHL0V4UURsVENyUnpmeFhBdXlGcVhod1giLCJtYWMiOiIxMTQ0MDAwNzNlZjk3MzlhMDYwNjdhYTYzNTdiZjc4YTI4ZTU4ZDJhOTA3MmVlNzI4MTAxY2U0OTkwNmY5NmY3IiwidGFnIjoiIn0%3D' \
+--data '{
+"title" : "Post 2",
+"content" : "Content 2",
+"mark" : 4
+}'
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Update Post
+> curl --location --request PUT 'localhost:8080/api/posts/updatePost/2' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer 2|ZmzWjQvAoCgvEXDL0ubbLICW4jIMApvajDTE5Y1i9271b691' \
+--header 'Cookie: XSRF-TOKEN=eyJpdiI6IitaZ2gzMzd1MithVFI1Y0Y2VTZMZUE9PSIsInZhbHVlIjoicVR6dm1pUGlCdjFOYmlQc2tZRytSL2laSGlxY3JjVks5N2JOYTNFUFdnc0J0Q0ErTEtzVUw1NC8ycVFiSTBwYVUxY1grUkg3V1VSQ2pCYU1GWGxwbmVMVzFSODMxVEQ2UGpGMmtLMGQvSzA1cXR5L20zLzVGcE9ubW9pMEpRbSsiLCJtYWMiOiJkZmY1ZjljNTljY2Q3ZTFmMmE2NzgzYjYyZTdjNjZiOTg4NmI2NTIzMGYwMGE5ZjQzYWM0YmE3NjNlNmY4YjQ5IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IlYzczdlWW1iSlNWN08yV3A0TWhqSUE9PSIsInZhbHVlIjoiMkZ4dkM0a01xaGNDb0pLSUlUNE5LanNLYkt1MXB0VGxHWExtY1FCK3FDbi9nRnkvNmlZYjhSODdCajA2Rk5uMFVxMFQ4eXZ5eGJCVXdNUUQ1TS9FUHJpOS9wYUppaXlWNUhDSk1lY0NHL0V4UURsVENyUnpmeFhBdXlGcVhod1giLCJtYWMiOiIxMTQ0MDAwNzNlZjk3MzlhMDYwNjdhYTYzNTdiZjc4YTI4ZTU4ZDJhOTA3MmVlNzI4MTAxY2U0OTkwNmY5NmY3IiwidGFnIjoiIn0%3D' \
+--data '{
+"title" : "Заголовок 2"
+}'
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Delete Post
+> curl --location --request DELETE 'localhost:8080/api/posts/deletePost/2' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer 2|ZmzWjQvAoCgvEXDL0ubbLICW4jIMApvajDTE5Y1i9271b691' \
+--header 'Cookie: XSRF-TOKEN=eyJpdiI6IitaZ2gzMzd1MithVFI1Y0Y2VTZMZUE9PSIsInZhbHVlIjoicVR6dm1pUGlCdjFOYmlQc2tZRytSL2laSGlxY3JjVks5N2JOYTNFUFdnc0J0Q0ErTEtzVUw1NC8ycVFiSTBwYVUxY1grUkg3V1VSQ2pCYU1GWGxwbmVMVzFSODMxVEQ2UGpGMmtLMGQvSzA1cXR5L20zLzVGcE9ubW9pMEpRbSsiLCJtYWMiOiJkZmY1ZjljNTljY2Q3ZTFmMmE2NzgzYjYyZTdjNjZiOTg4NmI2NTIzMGYwMGE5ZjQzYWM0YmE3NjNlNmY4YjQ5IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IlYzczdlWW1iSlNWN08yV3A0TWhqSUE9PSIsInZhbHVlIjoiMkZ4dkM0a01xaGNDb0pLSUlUNE5LanNLYkt1MXB0VGxHWExtY1FCK3FDbi9nRnkvNmlZYjhSODdCajA2Rk5uMFVxMFQ4eXZ5eGJCVXdNUUQ1TS9FUHJpOS9wYUppaXlWNUhDSk1lY0NHL0V4UURsVENyUnpmeFhBdXlGcVhod1giLCJtYWMiOiIxMTQ0MDAwNzNlZjk3MzlhMDYwNjdhYTYzNTdiZjc4YTI4ZTU4ZDJhOTA3MmVlNzI4MTAxY2U0OTkwNmY5NmY3IiwidGFnIjoiIn0%3D'
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+# `Comments`
+## Get Comments
+> curl --location 'localhost:8080/api/comments/getComments' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer 2|ZmzWjQvAoCgvEXDL0ubbLICW4jIMApvajDTE5Y1i9271b691' \
+--header 'Cookie: XSRF-TOKEN=eyJpdiI6IitaZ2gzMzd1MithVFI1Y0Y2VTZMZUE9PSIsInZhbHVlIjoicVR6dm1pUGlCdjFOYmlQc2tZRytSL2laSGlxY3JjVks5N2JOYTNFUFdnc0J0Q0ErTEtzVUw1NC8ycVFiSTBwYVUxY1grUkg3V1VSQ2pCYU1GWGxwbmVMVzFSODMxVEQ2UGpGMmtLMGQvSzA1cXR5L20zLzVGcE9ubW9pMEpRbSsiLCJtYWMiOiJkZmY1ZjljNTljY2Q3ZTFmMmE2NzgzYjYyZTdjNjZiOTg4NmI2NTIzMGYwMGE5ZjQzYWM0YmE3NjNlNmY4YjQ5IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IlYzczdlWW1iSlNWN08yV3A0TWhqSUE9PSIsInZhbHVlIjoiMkZ4dkM0a01xaGNDb0pLSUlUNE5LanNLYkt1MXB0VGxHWExtY1FCK3FDbi9nRnkvNmlZYjhSODdCajA2Rk5uMFVxMFQ4eXZ5eGJCVXdNUUQ1TS9FUHJpOS9wYUppaXlWNUhDSk1lY0NHL0V4UURsVENyUnpmeFhBdXlGcVhod1giLCJtYWMiOiIxMTQ0MDAwNzNlZjk3MzlhMDYwNjdhYTYzNTdiZjc4YTI4ZTU4ZDJhOTA3MmVlNzI4MTAxY2U0OTkwNmY5NmY3IiwidGFnIjoiIn0%3D'
 
-## Learning Laravel
+## Get Comment
+> curl --location 'localhost:8080/api/comments/getComment/2' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer 2|ZmzWjQvAoCgvEXDL0ubbLICW4jIMApvajDTE5Y1i9271b691' \
+--header 'Cookie: XSRF-TOKEN=eyJpdiI6IitaZ2gzMzd1MithVFI1Y0Y2VTZMZUE9PSIsInZhbHVlIjoicVR6dm1pUGlCdjFOYmlQc2tZRytSL2laSGlxY3JjVks5N2JOYTNFUFdnc0J0Q0ErTEtzVUw1NC8ycVFiSTBwYVUxY1grUkg3V1VSQ2pCYU1GWGxwbmVMVzFSODMxVEQ2UGpGMmtLMGQvSzA1cXR5L20zLzVGcE9ubW9pMEpRbSsiLCJtYWMiOiJkZmY1ZjljNTljY2Q3ZTFmMmE2NzgzYjYyZTdjNjZiOTg4NmI2NTIzMGYwMGE5ZjQzYWM0YmE3NjNlNmY4YjQ5IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IlYzczdlWW1iSlNWN08yV3A0TWhqSUE9PSIsInZhbHVlIjoiMkZ4dkM0a01xaGNDb0pLSUlUNE5LanNLYkt1MXB0VGxHWExtY1FCK3FDbi9nRnkvNmlZYjhSODdCajA2Rk5uMFVxMFQ4eXZ5eGJCVXdNUUQ1TS9FUHJpOS9wYUppaXlWNUhDSk1lY0NHL0V4UURsVENyUnpmeFhBdXlGcVhod1giLCJtYWMiOiIxMTQ0MDAwNzNlZjk3MzlhMDYwNjdhYTYzNTdiZjc4YTI4ZTU4ZDJhOTA3MmVlNzI4MTAxY2U0OTkwNmY5NmY3IiwidGFnIjoiIn0%3D'
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Add Comment
+> curl --location 'localhost:8080/api/comments/addComment' \
+--header 'Accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer 2|ZmzWjQvAoCgvEXDL0ubbLICW4jIMApvajDTE5Y1i9271b691' \
+--header 'Cookie: XSRF-TOKEN=eyJpdiI6IitaZ2gzMzd1MithVFI1Y0Y2VTZMZUE9PSIsInZhbHVlIjoicVR6dm1pUGlCdjFOYmlQc2tZRytSL2laSGlxY3JjVks5N2JOYTNFUFdnc0J0Q0ErTEtzVUw1NC8ycVFiSTBwYVUxY1grUkg3V1VSQ2pCYU1GWGxwbmVMVzFSODMxVEQ2UGpGMmtLMGQvSzA1cXR5L20zLzVGcE9ubW9pMEpRbSsiLCJtYWMiOiJkZmY1ZjljNTljY2Q3ZTFmMmE2NzgzYjYyZTdjNjZiOTg4NmI2NTIzMGYwMGE5ZjQzYWM0YmE3NjNlNmY4YjQ5IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IlYzczdlWW1iSlNWN08yV3A0TWhqSUE9PSIsInZhbHVlIjoiMkZ4dkM0a01xaGNDb0pLSUlUNE5LanNLYkt1MXB0VGxHWExtY1FCK3FDbi9nRnkvNmlZYjhSODdCajA2Rk5uMFVxMFQ4eXZ5eGJCVXdNUUQ1TS9FUHJpOS9wYUppaXlWNUhDSk1lY0NHL0V4UURsVENyUnpmeFhBdXlGcVhod1giLCJtYWMiOiIxMTQ0MDAwNzNlZjk3MzlhMDYwNjdhYTYzNTdiZjc4YTI4ZTU4ZDJhOTA3MmVlNzI4MTAxY2U0OTkwNmY5NmY3IiwidGFnIjoiIn0%3D' \
+--data '{
+"post_id" : 2,
+"text" : "coment 2",
+"likes_count" : 9,
+"dislikes_count" : 1
+}'
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Update Comment
+> curl --location --request PUT 'localhost:8080/api/comments/updateComment/1' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer 2|ZmzWjQvAoCgvEXDL0ubbLICW4jIMApvajDTE5Y1i9271b691' \
+--header 'Cookie: XSRF-TOKEN=eyJpdiI6IitaZ2gzMzd1MithVFI1Y0Y2VTZMZUE9PSIsInZhbHVlIjoicVR6dm1pUGlCdjFOYmlQc2tZRytSL2laSGlxY3JjVks5N2JOYTNFUFdnc0J0Q0ErTEtzVUw1NC8ycVFiSTBwYVUxY1grUkg3V1VSQ2pCYU1GWGxwbmVMVzFSODMxVEQ2UGpGMmtLMGQvSzA1cXR5L20zLzVGcE9ubW9pMEpRbSsiLCJtYWMiOiJkZmY1ZjljNTljY2Q3ZTFmMmE2NzgzYjYyZTdjNjZiOTg4NmI2NTIzMGYwMGE5ZjQzYWM0YmE3NjNlNmY4YjQ5IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IlYzczdlWW1iSlNWN08yV3A0TWhqSUE9PSIsInZhbHVlIjoiMkZ4dkM0a01xaGNDb0pLSUlUNE5LanNLYkt1MXB0VGxHWExtY1FCK3FDbi9nRnkvNmlZYjhSODdCajA2Rk5uMFVxMFQ4eXZ5eGJCVXdNUUQ1TS9FUHJpOS9wYUppaXlWNUhDSk1lY0NHL0V4UURsVENyUnpmeFhBdXlGcVhod1giLCJtYWMiOiIxMTQ0MDAwNzNlZjk3MzlhMDYwNjdhYTYzNTdiZjc4YTI4ZTU4ZDJhOTA3MmVlNzI4MTAxY2U0OTkwNmY5NmY3IiwidGFnIjoiIn0%3D' \
+--data ''
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Delete Comment
+> curl --location --request DELETE 'localhost:8080/api/comments/deleteComment/1' \
+--header 'Accept: application/json' \
+--header 'Authorization: Bearer 2|ZmzWjQvAoCgvEXDL0ubbLICW4jIMApvajDTE5Y1i9271b691' \
+--header 'Cookie: XSRF-TOKEN=eyJpdiI6IitaZ2gzMzd1MithVFI1Y0Y2VTZMZUE9PSIsInZhbHVlIjoicVR6dm1pUGlCdjFOYmlQc2tZRytSL2laSGlxY3JjVks5N2JOYTNFUFdnc0J0Q0ErTEtzVUw1NC8ycVFiSTBwYVUxY1grUkg3V1VSQ2pCYU1GWGxwbmVMVzFSODMxVEQ2UGpGMmtLMGQvSzA1cXR5L20zLzVGcE9ubW9pMEpRbSsiLCJtYWMiOiJkZmY1ZjljNTljY2Q3ZTFmMmE2NzgzYjYyZTdjNjZiOTg4NmI2NTIzMGYwMGE5ZjQzYWM0YmE3NjNlNmY4YjQ5IiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IlYzczdlWW1iSlNWN08yV3A0TWhqSUE9PSIsInZhbHVlIjoiMkZ4dkM0a01xaGNDb0pLSUlUNE5LanNLYkt1MXB0VGxHWExtY1FCK3FDbi9nRnkvNmlZYjhSODdCajA2Rk5uMFVxMFQ4eXZ5eGJCVXdNUUQ1TS9FUHJpOS9wYUppaXlWNUhDSk1lY0NHL0V4UURsVENyUnpmeFhBdXlGcVhod1giLCJtYWMiOiIxMTQ0MDAwNzNlZjk3MzlhMDYwNjdhYTYzNTdiZjc4YTI4ZTU4ZDJhOTA3MmVlNzI4MTAxY2U0OTkwNmY5NmY3IiwidGFnIjoiIn0%3D'

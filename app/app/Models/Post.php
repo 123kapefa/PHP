@@ -15,4 +15,21 @@ class Post extends Model
         , Filterable
         , Attachable
         ;
+
+    protected $fillable = [
+        'title',
+        'content',
+        'mark',
+        'user_id',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }

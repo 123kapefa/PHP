@@ -16,6 +16,14 @@ class Comment extends Model
         , Attachable
         ;
 
+    protected $fillable = [
+        'user_id',
+        'post_id',
+        'text',
+        'likes_count',
+        'dislikes_count',
+    ];
+
     public function post()
     {
         return $this->belongsTo(Post::class);

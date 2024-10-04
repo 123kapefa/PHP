@@ -33,5 +33,10 @@ return [
             'text' => 'Contact Us',
             'current' => false
         ],
+        [
+            'link' => '/feedback',
+            'text' => 'Feedback',
+            'current' => false
+        ],
     ],
 ];

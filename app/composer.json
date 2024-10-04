@@ -10,7 +10,8 @@
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
         "orchid/crud": "^4.3",
-        "orchid/platform": "^14.36"
+        "orchid/platform": "^14.36",
+      "ext-gd": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

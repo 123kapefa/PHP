@@ -13,7 +13,10 @@ RUN useradd -g $DOCKER_GUID -u $DOCKER_ID --create-home docker
 
 COPY .docker/app/docker-entrypoint.sh /docker-entrypoint.sh
 
-RUN apt-get update && apt-get install -y libpq-dev zip
+RUN apt-get update && apt-get install -y libpq-dev zip libpng-dev libjpeg62-turbo-dev libfreetype6-dev
+
+RUN docker-php-ext-configure gd --with-jpeg --with-freetype
+RUN docker-php-ext-install gd
 
 RUN docker-php-ext-install pdo_pgsql
 
